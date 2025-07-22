@@ -5,6 +5,10 @@
     font-family: "Bitter", serif;
 }
 
+.container {
+    padding: 0 16px;
+}
+
 h1 {
     color: #d62b57;
     text-transform: uppercase;
@@ -57,9 +61,17 @@ button {
     margin-bottom: 60px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    line-height: 1.50;
     border: 2px solid #d62b56a2;
     color: #d62b57;
     font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #d62b57;
+    color: #f8f0e1;
 }
 
 .center {
@@ -77,6 +89,7 @@ section {
 .class {
     border: 1px solid #493409;
     width: 35%;
+    min-width: 480px;
     padding: 15px;
     margin: 24px auto;
     border-radius: 90px;
@@ -92,11 +105,13 @@ section {
 }
 
 #phrase {
+    display: flex;
     background-image: linear-gradient(rgba(129, 78, 91, 0.39), rgba(107, 11, 35, 0.39), rgba(129, 78, 91, 0.39)), url(./assets/biblioteca.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 560px;
+    align-items: center;
 }
 
 #phrase p {
@@ -105,7 +120,7 @@ section {
     font-size: 32px;
     text-shadow: 3px 2px #493409;
     text-align: left;
-    padding: 15% 10%;
+    padding: 0 10%;
 }
 
 .lady {
@@ -114,6 +129,7 @@ section {
     padding: 15px;
     gap: 10px;
     width: 40%;
+    min-width: 490px;
     text-align: left;
     align-items: center;
 }
@@ -128,10 +144,9 @@ section {
     color: gold;
 }
 
-.lady p, strong {
+.lady p, b {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #d62b56ce;
-    margin: auto 0;
 }
 
 .closing {
@@ -139,14 +154,29 @@ section {
 }
 
 footer {
-    border-top: 1px solid #d62b5641;
+    border-top: 2px solid #d62b5641;
     text-align: center;
-    margin: auto 0;
     padding: 80px;
     color: black;
     background: linear-gradient(#f8f0e1, #d62b562a);
 }
 
 footer a {
+    color: black;
+}
+
+footer a:hover {
     color: #d62b57;
+}
+
+@media(max-width:525px) {
+    .class {
+        min-width: 90%;
+    }
+}
+
+@media(max-width:491px) {
+    .lady {
+        min-width: 90%;
+    }
 }
