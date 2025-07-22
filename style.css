@@ -88,6 +88,7 @@ section {
 
 .class {
     border: 1px solid #493409;
+    box-shadow: inset -3px 3px 8px 0px rgba(0, 0, 0, 0.207);
     width: 35%;
     min-width: 480px;
     padding: 15px;
